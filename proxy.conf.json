@@ -1,0 +1,7 @@
+{
+    "/users/*":{
+        "target":"http://darient-api-shoes.somee.com",
+        "secure": false,
+        "changeOrigin": true
+    }
+}

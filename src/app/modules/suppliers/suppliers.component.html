@@ -1,0 +1,28 @@
+<div class="row mt-5">
+    <h2>Proveedores</h2>
+    <mat-card>
+    <div class="col">
+         <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Tipo de Zapato</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let supplier of suppliers; index as i">
+                    <td scope="row">{{supplier.id}}</td>
+                    <td>{{supplier.name}}</td>
+                    <td>{{supplier.phone}}</td>
+                    <td>{{supplier.adress}}</td>
+                    <td >{{selectShoes(supplier.shoesTypeId)}}</td> 
+                  </tr>
+
+            </tbody>
+        </table> 
+    </div>
+</mat-card>
+</div> 

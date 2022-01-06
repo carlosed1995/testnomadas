@@ -1,0 +1,26 @@
+<div class="row mt-5">
+    <h2>Tiendas</h2>
+    <mat-card>
+    <div class="col">
+         <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Cantidad</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stores of store; index as i">
+                    <td scope="row">{{stores.id}}</td>
+                    <td>{{stores.name}}</td> 
+                    <td>{{stores.adress}}</td>
+                    <td>{{stores.shoesQty}}</td> 
+                  </tr>
+
+            </tbody>
+        </table> 
+    </div>
+</mat-card>
+</div> 

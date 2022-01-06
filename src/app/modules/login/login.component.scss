@@ -1,0 +1,36 @@
+.login-form {
+  padding: 4rem 1rem;
+
+  mat-card {
+    max-width: 300px;
+    margin: 2rem auto;
+    text-align: center;
+    height: 350px;
+  }
+
+  .full-width-input,
+  button {
+    width: 100%;
+  }
+
+  .separator {
+    margin-bottom: 2rem;
+  }
+
+  .error {
+    padding: 16px;
+    width: auto;
+    color: white;
+    background-color: red;
+    margin: 0 auto;
+    position: relative;
+    top: 30px;
+    text-align: center;
+}
+
+
+
+
+
+
+}

@@ -1,0 +1,56 @@
+ 
+    <mat-card>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <div class="form-group">
+              <label for="color">Color</label>
+              <input type="text"  formControlName="color" matInput required value="{{shoes.color}}" class="form-control col-md-6" id="color" aria-describedby="color" placeholder="Color">
+             </div>
+             <div class="form-group">
+              <label for="Talla">Talla</label>
+              <input type="text" value="{{shoes.size}}" formControlName="size" matInput required class="form-control  col-md-6" id="Talla" aria-describedby="Talla" placeholder="Talla">
+             </div>
+             <div class="form-group">
+              <label for="color">Imagen</label>
+              <img src="{{shoes.frontImage}}" style="padding: 10px;" width="90px" height="90px">
+             </div>
+             <div class="form-group">
+              <label for="Sexo">Sexo</label>
+              <select class="form-control" [id]="sexid" > 
+             <option *ngFor="let sx of sexes" [value]="sx.id" [selected]="sx.id == shoes.sexId">{{sx.sex}}</option>
+            </select>
+             </div>
+             <div class="form-group">
+              <label for="Tienda">Tienda</label>
+              <select class="form-control"  [id]="storeid"  > 
+                <option *ngFor="let st of stores" [value]="st.id" [selected]="st.id == shoes.storeId">{{st.name}}</option>
+               </select>
+              </div>
+             <div class="form-group">
+              <label for="Vendedor">Vendedor</label>
+              <select class="form-control" [id]="sellerid" > 
+                <option *ngFor="let seller of sellers" [value]="seller.id" [selected]="seller.id == shoes.sellerId">{{seller.name}}</option>
+               </select>
+              </div>
+             <div class="form-group">
+              <label for="Comprador">Proveedor</label>
+              <select class="form-control"  [id]="supplierid" [formControlName]="supplierid" > 
+                <option *ngFor="let sp of suppliers" [value]="sp.id" [selected]="sp.id == shoes.supplierId">{{sp.name}}</option>
+               </select>
+              </div>
+             <div class="form-group">
+              <label for="Cantidad">Cantidad</label>
+              <input type="text" value="{{shoes.quantity}}"  formControlName="quantity" class="form-control" id="Cantidad" aria-describedby="Cantidad" placeholder="Cantidad">
+             </div>
+             <div class="form-group">
+              <label for="Marca">Marca</label>
+              <input type="text" value="{{shoes.brand}}"  formControlName="brand" class="form-control" id="Marca" aria-describedby="Marca" placeholder="Marca">
+             </div>
+             <div class="form-group">
+              <label for="Precio">Precio</label>
+              <input type="text" value="{{shoes.price}}"  formControlName="price" class="form-control" id="Precio" aria-describedby="Precio" placeholder="Precio">
+             </div> 
+             <div class="form-group">
+             <button type="submit" class="btn btn-primary">Actualizar</button>
+            </div> 
+          </form>
+    </mat-card> 

@@ -1,0 +1,45 @@
+ 
+    <mat-card>
+        <form>
+            <div class="form-group">
+              <label for="color">Color</label>
+              <input type="text" value="{{selectSupplier(shoes.supplierId)}}" class="form-control col-md-6" id="color" aria-describedby="color" placeholder="Color" disabled>
+             </div>
+             <div class="form-group">
+              <label for="Talla">Talla</label>
+              <input type="text" value="{{shoes.size}}" class="form-control  col-md-6" id="Talla" aria-describedby="Talla" placeholder="Talla" disabled>
+             </div>
+             <div class="form-group">
+              <label for="color">Imagen</label>
+              <img src="{{shoes.frontImage}}" style="padding: 10px;" width="90px" height="90px">
+             </div>
+             <div class="form-group">
+              <label for="Sexo">Sexo</label>
+              <input type="text" value="{{selectSx(shoes.sexId)}}" class="form-control" id="Sexo" aria-describedby="Sexo" placeholder="Sexo" disabled>
+             </div>
+             <div class="form-group">
+              <label for="Tienda">Tienda</label>
+              <input type="text" value="{{selectStore(shoes.storeId)}}" class="form-control" id="Tienda" aria-describedby="Tienda" placeholder="Tienda" disabled>
+             </div>
+             <div class="form-group">
+              <label for="Vendedor">Vendedor</label>
+              <input type="text" value="{{selectSeller(shoes.sellerId)}}" class="form-control" id="Vendedor" aria-describedby="Vendedor" placeholder="Vendedor" disabled>
+             </div>
+             <div class="form-group">
+              <label for="Comprador">Proveedor</label>
+              <input type="text" value="{{selectSupplier(shoes.supplierId)}}" class="form-control" id="Comprador" aria-describedby="Comprador" placeholder="Comprador" disabled>
+             </div>
+             <div class="form-group">
+              <label for="Cantidad">Cantidad</label>
+              <input type="text" value="{{shoes.quantity}}" class="form-control" id="Cantidad" aria-describedby="Cantidad" placeholder="Cantidad" disabled>
+             </div>
+             <div class="form-group">
+              <label for="Marca">Marca</label>
+              <input type="text" value="{{shoes.brand}}" class="form-control" id="Marca" aria-describedby="Marca" placeholder="Marca" disabled>
+             </div>
+             <div class="form-group">
+              <label for="Precio">Precio</label>
+              <input type="text" value="{{shoes.price}}" class="form-control" id="Precio" aria-describedby="Precio" placeholder="Precio" disabled>
+             </div> 
+          </form>
+    </mat-card> 

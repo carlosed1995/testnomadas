@@ -1,0 +1,52 @@
+ 
+    <mat-card>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <div class="form-group">
+              <label for="color">Color</label>
+              <input type="text"  formControlName="color" matInput required class="form-control col-md-6" id="color" aria-describedby="color" placeholder="Color">
+             </div>
+             <div class="form-group">
+              <label for="Talla">Talla</label>
+              <input type="text" formControlName="size" matInput required class="form-control  col-md-6" id="Talla" aria-describedby="Talla" placeholder="Talla">
+             </div>
+             <div class="form-group">
+              <label for="Sexo">Sexo</label>
+              <select class="form-control" [id]="sexid" > 
+             <option *ngFor="let sx of sexes">{{sx.sex}}</option>
+            </select>
+             </div>
+             <div class="form-group">
+              <label for="Tienda">Tienda</label>
+              <select class="form-control"  [id]="storeid"  > 
+                <option *ngFor="let st of stores" [value]="st.id">{{st.name}}</option>
+               </select>
+              </div>
+             <div class="form-group">
+              <label for="Vendedor">Vendedor</label>
+              <select class="form-control" [id]="sellerid" > 
+                <option *ngFor="let seller of sellers" [value]="seller.id">{{seller.name}}</option>
+               </select>
+              </div>
+             <div class="form-group">
+              <label for="Comprador">Proveedor</label>
+              <select class="form-control"  [id]="supplierid"  > 
+                <option *ngFor="let sp of suppliers" [value]="sp.id">{{sp.name}}</option>
+               </select>
+              </div>
+             <div class="form-group">
+              <label for="Cantidad">Cantidad</label>
+              <input type="text"  formControlName="quantity" class="form-control" id="Cantidad" aria-describedby="Cantidad" placeholder="Cantidad">
+             </div>
+             <div class="form-group">
+              <label for="Marca">Marca</label>
+              <input type="text"  formControlName="brand" class="form-control" id="Marca" aria-describedby="Marca" placeholder="Marca">
+             </div>
+             <div class="form-group">
+              <label for="Precio">Precio</label>
+              <input type="text" formControlName="price" class="form-control" id="Precio" aria-describedby="Precio" placeholder="Precio">
+             </div> 
+             <div class="form-group">
+             <button type="submit" class="btn btn-primary">Crear</button>
+            </div> 
+          </form>
+    </mat-card> 

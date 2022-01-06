@@ -1,0 +1,32 @@
+<div class="row mt-5">
+    <h2>Vendedores</h2>
+    <mat-card>
+    <div class="col">
+         <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Nacionalidad</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Estatus</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let seller of sellers; index as i">
+                    <td scope="row">{{seller.id}}</td>
+                    <td>{{seller.name}}</td>
+                    <td >{{selectSx(seller.sexId)}}</td>
+                    <td>{{seller.nationality}}</td>
+                    <td>{{seller.phone}}</td>
+                    <td>{{seller.adress}}</td>
+                    <td>{{seller.status}}</td>     
+                  </tr>
+
+            </tbody>
+        </table> 
+    </div>
+</mat-card>
+</div> 

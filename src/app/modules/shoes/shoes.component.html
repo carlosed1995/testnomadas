@@ -1,0 +1,54 @@
+<div class="row mt-5">
+    <h2>Zapatos</h2>
+    <mat-card>
+        <a type="a" class="btn btn-primary float-right mb-3" routerLink="/createshoes" >Crear</a>
+        
+    <div class="col">
+         <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Talla</th>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Tienda</th>
+                    <th scope="col">Nombre V.</th>
+                    <th scope="col">Nombre P.</th> 
+                    <th scope="col">Cantidad</th> 
+                    <th scope="col">Marca</th> 
+                    <th scope="col">Precio</th> 
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let shoe of shoes; index as i">
+                    <td scope="row">{{shoe.id}}</td>
+                    <td>{{shoe.color}}</td>
+                    <td>{{shoe.size}}</td>
+                    <td><img src="{{shoe.frontImage}}" width="30px" height="30px"></td>
+                    <td >{{selectSx(shoe.sexId)}}</td>
+                    <td>{{selectStore(shoe.storeId)}}</td>
+                    <td>{{selectSeller(shoe.sellerId)}}</td>
+                    <td>{{selectSupplier(shoe.supplierId)}}</td>
+                    <td>{{shoe.quantity}}</td> 
+                    <td>{{shoe.brand}}</td>  
+                    <td>{{shoe.price}}</td>   
+                    <td>
+                        <a routerLink="/updateshoes/{{shoe.id}}" class="btn btn-primary" >Actualizar</a>
+                    </td>
+                    <td>
+                        <a routerLink="/viewshoes/{{shoe.id}}" class="btn btn-info" >Ver</a>
+                    </td>
+                    <td>
+                        <button (click)="onDeleteShoes(shoe.id)" class="btn btn-danger">Eliminar</button>
+                    </td>   
+                  </tr>
+
+            </tbody>
+        </table> 
+    </div>
+</mat-card>
+</div> 
